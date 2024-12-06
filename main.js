@@ -95,32 +95,3 @@ function playRound(humanChoice, computerChoice){
     return result;
   }
 }
-
-function playGame(){
-
-  let winner = "";
-
-  for(let i = 0; i < 5; i++){
-    playRound(getHumanChoice(), getComputerChoice());
-  }
-
-  if(humanScore == computerScore){
-    winner = "It's a draw! With a score of " + humanScore + "-" + computerScore;
-    console.log(winner);
-    return winner;
-  }
-
-  if(humanScore > computerScore){
-    winner = "Human wins! With a score of " + humanScore + "-" + computerScore;
-    console.log(winner);
-    return winner;
-  }
-  else{
-    winner = "Computer wins! With a score of " + humanScore + "-" + computerScore;
-    console.log(winner);
-    return winner;
-  }
-
-}
-
-playGame();
